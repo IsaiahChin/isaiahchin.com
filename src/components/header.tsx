@@ -26,9 +26,9 @@ export default function Header() {
                 <g
                   id="Page-1"
                   stroke="none"
-                  stroke-width="1"
+                  strokeWidth="1"
                   fill="none"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   stroke-linecap="round"
                 >
                   <g
@@ -44,13 +44,13 @@ export default function Header() {
                       />
                       <polyline
                         id="Path-93"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                         points="13 4 20.0207973 4 20.0207973 11.0191059"
                       />
                       <path
                         d="M19,5 L12,12"
                         id="Path-94"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                       />
                     </g>
                   </g>
