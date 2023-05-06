@@ -32,12 +32,3 @@ h5,
 h6 {
   font-family: theme('fontFamily.inter');
 }
-
-a {
-  color: theme('colors.blue.600');
-  text-decoration: underline 2px theme('colors.blue.600');
-}
-
-a:hover {
-  text-decoration: none;
-}

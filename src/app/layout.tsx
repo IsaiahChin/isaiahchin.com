@@ -1,6 +1,7 @@
-import { Metadata } from 'next';
 import '../styles/globals.css';
 import { Inter, Poppins } from 'next/font/google';
+import { Metadata } from 'next';
+import Header from '@/components/header';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,7 +31,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable}`}>
+      <body className={`${inter.variable} ${poppins.variable} text-slate-900`}>
+        <Header />
         <main className="mx-auto max-w-6xl min-h-screen w-full p-24">
           {children}
         </main>
