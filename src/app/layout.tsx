@@ -3,6 +3,7 @@ import { Inter, Poppins } from 'next/font/google';
 import { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { Providers } from './providers';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,13 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} max-w-5xl mx-auto text-slate-900 bg-stone-100 dark:text-stone-100 dark:bg-stone-900`}
+        className={`${inter.variable} ${poppins.variable} max-w-5xl mx-auto text-slate-900 bg-stone-100 dark:text-stone-100 dark:bg-stone-900 selection:bg-lime-300 selection:bg-opacity-70 dark:selection:bg-slate-500 transition-colors`}
       >
-        <Header />
-        <main className="min-h-screen w-full p-16">{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main className="min-h-screen w-full p-8 sm:p-16">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
