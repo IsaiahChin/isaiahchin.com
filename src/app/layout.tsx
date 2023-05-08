@@ -35,9 +35,7 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} max-w-5xl mx-auto text-slate-900 bg-stone-100 dark:text-stone-100 dark:bg-stone-900`}
       >
         <Header />
-        <main className="min-h-screen w-full p-16 transition-[padding]">
-          {children}
-        </main>
+        <main className="min-h-screen w-full p-16">{children}</main>
         <Footer />
       </body>
     </html>
