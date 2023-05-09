@@ -28,8 +28,10 @@ export default function Header() {
               href="https://github.com/isaiahchin"
               className="inline-flex gap-0.5 items-center p-1 px-2 border rounded-md hover:scale-110 
               border-primary/10 dark:border-light/10 
-              hover:bg-accent hover:-rotate-1 active:bg-accent-active 
-              dark:hover:bg-dark-neutral
+              hover:bg-accent hover:-rotate-1
+              dark:hover:text-primary 
+              dark:hover:bg-dark-accent
+              dark:[&_g]:hover:stroke-primary
               transition-transform"
               target="_blank"
             >

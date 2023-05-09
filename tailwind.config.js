@@ -15,8 +15,7 @@ module.exports = {
         secondary: colors.stone[900],
         light: colors.stone[100],
         accent: colors.lime[300],
-        'accent-active': colors.lime[400],
-        'dark-neutral': colors.slate[700],
+        'dark-accent': colors.violet[300],
       },
       fontFamily: {
         inter: ['var(--font-inter)'],
