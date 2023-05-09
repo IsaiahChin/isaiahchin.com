@@ -37,8 +37,7 @@ export default function RootLayout({
         className={`${inter.variable} ${poppins.variable} 
         max-w-5xl mx-auto 
         text-primary dark:text-light 
-        bg-light dark:bg-secondary 
-        selection:bg-opacity-70 selection:bg-accent dark:selection:bg-dark-neutral 
+        bg-light dark:bg-secondary  
         transition-colors`}
       >
         <Providers>
