@@ -12,7 +12,7 @@ export default function UpArrowIcon() {
           transform="translate(-488.000000, -1046.000000)"
           stroke="#333333"
           strokeWidth="2"
-          className="stroke-slate-900 dark:stroke-stone-100"
+          className="stroke-primary dark:stroke-light"
         >
           <g transform="translate(48.000000, 1046.000000)">
             <g transform="translate(440.000000, 0.000000)">

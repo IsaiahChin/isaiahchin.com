@@ -11,12 +11,16 @@ export default function Header() {
 
   return (
     <header id="home" className="w-full bg-inherit px-8 py-8 sm:px-16">
-      <nav className="flex justify-between items-center dark:[&_g]:stroke-stone-100">
+      <nav className="flex justify-between items-center dark:[&_g]:stroke-light">
         <ul className="flex gap-8">
           <li>
             <a
               href="https://github.com/isaiahchin"
-              className="inline-flex gap-0.5 items-center p-1 px-2 border border-slate-900/10 dark:border-stone-100/10 rounded-md hover:scale-110 hover:text-slate-900 hover:bg-lime-300 hover:-rotate-1 active:bg-lime-400 dark:[&_g]:hover:stroke-slate-900 transition-transform"
+              className="inline-flex gap-0.5 items-center p-1 px-2 border rounded-md hover:scale-110 
+              border-primary/10 dark:border-light/10 
+              hover:bg-accent hover:-rotate-1 active:bg-accent-active 
+              dark:hover:bg-dark-neutral
+              transition-transform"
               target="_blank"
             >
               Github
@@ -24,7 +28,7 @@ export default function Header() {
             </a>
           </li>
         </ul>
-        <div className="theme-changer ">
+        <div>
           <button
             onClick={() =>
               theme == 'dark' ? setTheme('light') : setTheme('dark')

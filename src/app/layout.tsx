@@ -1,8 +1,9 @@
 import '../styles/globals.css';
 import { Inter, Poppins } from 'next/font/google';
 import { Metadata } from 'next';
-import Header from '@/components/header';
-import Footer from '@/components/footer';
+
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { Providers } from './providers';
 
 const inter = Inter({
@@ -33,7 +34,12 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} max-w-5xl mx-auto text-slate-900 bg-stone-100 dark:text-stone-100 dark:bg-stone-900 selection:bg-lime-300 selection:bg-opacity-70 dark:selection:bg-slate-500 transition-colors`}
+        className={`${inter.variable} ${poppins.variable} 
+        max-w-5x mx-auto 
+        text-primary dark:text-light 
+        bg-light dark:bg-secondary 
+        selection:bg-opacity-70 selection:bg-accent dark:selection:bg-dark-neutral 
+        transition-colors`}
       >
         <Providers>
           <Header />

@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,11 +10,19 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        primary: colors.slate[900],
+        secondary: colors.stone[900],
+        light: colors.stone[100],
+        accent: colors.lime[300],
+        'accent-active': colors.lime[400],
+        'dark-neutral': colors.slate[700],
+      },
       fontFamily: {
         inter: ['var(--font-inter)'],
         poppins: ['var(--font-poppins)'],
       },
     },
   },
-  plugins: [],
+  plugin: [],
 };
