@@ -4,10 +4,20 @@ import ExternalLinkIcon from '../assets/ExternalLinkIcon';
 import SunIcon from '../assets/SunIcon';
 import MoonIcon from '../assets/MoonIcon';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  });
+
+  if (!hasMounted) {
+    return null;
+  }
 
   return (
     <header id="home" className="w-full bg-inherit px-8 py-8 sm:px-16">
