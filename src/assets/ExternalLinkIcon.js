@@ -1,7 +1,7 @@
 export default function ExternalLinkIcon() {
   return (
     <svg width="24px" height="24px" viewBox="0 0 24 24" className="scale-75">
-      <title>https://github.com/isaiahchin</title>
+      <title>https://github.com/IsaiahChin</title>
       <desc>My GitHub</desc>
       <defs />
       <g

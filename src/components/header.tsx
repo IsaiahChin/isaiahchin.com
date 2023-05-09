@@ -25,7 +25,7 @@ export default function Header() {
         <ul className="flex gap-8">
           <li>
             <a
-              href="https://github.com/isaiahchin"
+              href="https://github.com/IsaiahChin"
               className="inline-flex gap-0.5 items-center p-1 px-2 border rounded-md hover:scale-110 
               border-primary/10 dark:border-light/10 
               hover:bg-accent hover:-rotate-1
