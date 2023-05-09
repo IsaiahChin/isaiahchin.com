@@ -35,7 +35,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <body
         className={`${inter.variable} ${poppins.variable} 
-        max-w-5x mx-auto 
+        max-w-5xl mx-auto 
         text-primary dark:text-light 
         bg-light dark:bg-secondary 
         selection:bg-opacity-70 selection:bg-accent dark:selection:bg-dark-neutral 
