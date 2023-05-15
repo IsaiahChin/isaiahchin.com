@@ -1,4 +1,6 @@
 // import UpArrowIcon from '../assets/UpArrowIcon';
+import Image from 'next/image';
+import Penguin from '../assets/penguin-512x512.png';
 
 export default function Footer() {
   return (
@@ -6,7 +8,17 @@ export default function Footer() {
       className="flex w-full px-8 pb-8 sm:px-16 text-base 
     dark:[&_g]:stroke-light"
     >
-      <p>Built by Isaiah</p>
+      <p className="group">
+        Built by{' '}
+        <span className="underline decoration-primary dark:decoration-dark-accent underline-offset-4 decoration-dashed">
+          Isaiah
+        </span>
+        <Image
+          src={Penguin}
+          alt="Penguin"
+          className="fixed -bottom-40 left-1/4 max-w-[8rem] w-fit sm:ml-[11.8rem] sm:pointer-events-none group-hover:-translate-y-24 transition-transform"
+        />
+      </p>
       {/* Back to Top feature */}
       {/* <a
         href="#home"
