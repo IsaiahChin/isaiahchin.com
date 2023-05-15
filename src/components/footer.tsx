@@ -1,12 +1,14 @@
-import UpArrowIcon from '../assets/UpArrowIcon';
+// import UpArrowIcon from '../assets/UpArrowIcon';
 
 export default function Footer() {
   return (
     <footer
-      className="flex justify-end w-full px-8 pb-8 sm:px-16 text-lg 
+      className="flex w-full px-8 pb-8 sm:px-16 text-base 
     dark:[&_g]:stroke-light"
     >
-      <a
+      <p>Built by Isaiah</p>
+      {/* Back to Top feature */}
+      {/* <a
         href="#home"
         className="inline-flex gap-1 items-center p-1 px-2 border rounded-md 
         border-primary/10 dark:border-light/10 
@@ -18,7 +20,7 @@ export default function Footer() {
       >
         <UpArrowIcon />
         Back to top
-      </a>
+      </a> */}
     </footer>
   );
 }
