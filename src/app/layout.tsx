@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: 'Isaiah Chin',
     template: '%s - Isaiah Chin',
   },
-  description: 'A design-driven developer with an eye for detail',
+  description: 'Keen-eyed software developer. My personal website',
 };
 
 export default function RootLayout({
