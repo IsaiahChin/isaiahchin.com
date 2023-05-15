@@ -12,8 +12,8 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.slate[900],
-        secondary: colors.stone[900],
-        light: colors.stone[100],
+        secondary: colors.zinc[900],
+        light: colors.zinc[100],
         accent: colors.lime[300],
         'dark-accent': colors.violet[300],
       },

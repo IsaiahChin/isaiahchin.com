@@ -35,14 +35,15 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <body
         className={`${inter.variable} ${poppins.variable} 
-        max-w-5xl mx-auto 
+        max-w-5xl m-0 mx-auto 
+        flex flex-col min-h-screen 
         text-primary dark:text-light 
-        bg-light dark:bg-secondary  
+        bg-light dark:bg-secondary 
         transition-colors`}
       >
         <Providers>
           <Header />
-          <main className="min-h-screen w-full p-8 sm:p-16">{children}</main>
+          <main className="w-full p-8 sm:p-16 flex-1">{children}</main>
           <Footer />
         </Providers>
       </body>
