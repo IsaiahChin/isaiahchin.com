@@ -7,8 +7,7 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 export default function Header() {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  const { theme, setTheme } = useTheme();
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
@@ -47,7 +46,7 @@ export default function Header() {
             }
             className="rounded:md hover:scale-125 cursor-pointer transition-transform"
           >
-            {currentTheme == 'dark' ? (
+            {theme == 'dark' ? (
               <SunIcon size="2" />
             ) : (
               <MoonIcon size="2" />
