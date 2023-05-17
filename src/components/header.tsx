@@ -12,7 +12,6 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
   const [hasMounted, setHasMounted] = useState(false);
   const pathname = usePathname();
-  console.log('PATHNAME: ' + pathname);
 
   useEffect(() => {
     setHasMounted(true);
