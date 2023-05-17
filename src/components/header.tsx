@@ -65,7 +65,7 @@ export default function Header() {
             onClick={() =>
               theme == 'dark' ? setTheme('light') : setTheme('dark')
             }
-            className="rounded:md hover:scale-125 [&>g]:hover:stroke-amber-300 transition-transform"
+            className="rounded:md hover:scale-125 active:scale-100 transition-transform"
           >
             {theme == 'dark' ? <SunIcon size="2" /> : <MoonIcon size="2" />}
           </button>
