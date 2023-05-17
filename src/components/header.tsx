@@ -5,6 +5,7 @@ import SunIcon from '../assets/SunIcon';
 import MoonIcon from '../assets/MoonIcon';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -19,38 +20,48 @@ export default function Header() {
   }
 
   return (
-    <header id="home" className="w-full bg-inherit px-8 py-8 sm:px-16">
+    <header
+      id="home"
+      className="w-full bg-inherit py-4 sm:py-8 text-[16px] sm:text-xl sticky top-0"
+    >
       <nav className="flex justify-between items-center dark:[&_g]:stroke-light">
-        <ul className="flex gap-8">
+        <ul className="flex gap-4 items-center">
+          {[
+            ['Home', '/'],
+            ['Blog', '/blog'],
+            ['Projects', '/projects'],
+          ].map(([title, url]) => (
+            <li>
+              <Link
+                href={url}
+                className="hover:underline underline-offset-4 
+              hover:decoration-primary dark:hover:decoration-dark-accent"
+              >
+                {title}
+              </Link>
+            </li>
+          ))}
           <li>
             <a
               href="https://github.com/IsaiahChin"
-              className="inline-flex gap-0.5 items-center p-1 px-2 border rounded-md hover:scale-110 
-              border-primary/10 dark:border-light/10 
-              hover:bg-accent hover:-rotate-1
-              dark:hover:text-primary 
-              dark:hover:bg-dark-accent
-              dark:[&_g]:hover:stroke-primary
-              transition-transform"
+              className="inline-flex gap-x-1
+              hover:underline underline-offset-4 
+              hover:decoration-primary dark:hover:decoration-dark-accent"
               target="_blank"
             >
               Github
-              <ExternalLinkIcon />
+              <ExternalLinkIcon size="1.5" />
             </a>
           </li>
         </ul>
-        <div>
+        <div className="h-[32px]">
           <button
             onClick={() =>
               theme == 'dark' ? setTheme('light') : setTheme('dark')
             }
-            className="rounded:md hover:scale-125 cursor-pointer transition-transform"
+            className="rounded:md hover:scale-125 [&>g]:hover:stroke-amber-300 transition-transform"
           >
-            {theme == 'dark' ? (
-              <SunIcon size="2" />
-            ) : (
-              <MoonIcon size="2" />
-            )}
+            {theme == 'dark' ? <SunIcon size="2" /> : <MoonIcon size="2" />}
           </button>
         </div>
       </nav>
