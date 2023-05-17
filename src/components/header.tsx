@@ -21,6 +21,12 @@ export default function Header() {
     return null;
   }
 
+  const navLinks = [
+    ['Home', '/'],
+    // ['Blog', '/blog'],
+    ['Projects', '/projects'],
+  ];
+
   return (
     <header
       id="home"
@@ -28,11 +34,7 @@ export default function Header() {
     >
       <nav className="flex justify-between items-center dark:[&_g]:stroke-light">
         <ul className="flex gap-4 items-center">
-          {[
-            ['Home', '/'],
-            ['Blog', '/blog'],
-            ['Projects', '/projects'],
-          ].map(([title, url]) => (
+          {navLinks.map(([title, url]) => (
             <li key={title}>
               <Link
                 href={url}
