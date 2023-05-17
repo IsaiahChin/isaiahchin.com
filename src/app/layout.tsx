@@ -36,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} 
         max-w-5xl m-0 mx-auto 
+        px-6 sm:px-16 
         flex flex-col min-h-screen 
         text-primary dark:text-light 
         bg-light dark:bg-secondary 
@@ -43,7 +44,7 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          <main className="w-full p-8 sm:p-16 flex-1">{children}</main>
+          <main className="w-full py-16 flex-1">{children}</main>
           <Footer />
         </Providers>
       </body>

@@ -1,7 +1,9 @@
+import Section from '@/components/Section';
+
 export default function Home() {
   return (
     <>
-      <section className="mt-8 pt-0 py-16 w-fit">
+      <Section>
         <h1 className="pb-4 leading-tight">Hi, I'm Isaiah</h1>
         <p>A keen-eyed developer with a passion for UI/UX design.</p>
         <br />
@@ -10,7 +12,7 @@ export default function Home() {
           I like planning, solving problems, photography, playing the piano, and
           gaming.
         </p>
-      </section>
+      </Section>
     </>
   );
 }
