@@ -4,12 +4,15 @@ import ExternalLinkIcon from '../assets/ExternalLinkIcon';
 import SunIcon from '../assets/SunIcon';
 import MoonIcon from '../assets/MoonIcon';
 import { useTheme } from 'next-themes';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
   const [hasMounted, setHasMounted] = useState(false);
+  const pathname = usePathname();
+  console.log('PATHNAME: ' + pathname);
 
   useEffect(() => {
     setHasMounted(true);
@@ -31,11 +34,15 @@ export default function Header() {
             ['Blog', '/blog'],
             ['Projects', '/projects'],
           ].map(([title, url]) => (
-            <li>
+            <li key={title}>
               <Link
                 href={url}
-                className="hover:underline underline-offset-4 
-              hover:decoration-primary dark:hover:decoration-dark-accent"
+                className={`${
+                  pathname === url
+                    ? 'underline decoration-primary dark:decoration-dark-accent '
+                    : ''
+                }hover:underline underline-offset-4 
+              hover:decoration-primary dark:hover:decoration-dark-accent`}
               >
                 {title}
               </Link>
