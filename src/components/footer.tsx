@@ -5,7 +5,7 @@ import Penguin from '../assets/penguin-512x512.png';
 export default function Footer() {
   return (
     <footer
-      className="flex w-full px-8 pb-8 sm:px-16 text-base 
+      className="flex w-full pb-8 text-base 
     dark:[&_g]:stroke-light"
     >
       <p className="group">
