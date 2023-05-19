@@ -4,18 +4,21 @@
 
 @layer base {
   h1 {
-    @apply text-5xl font-semibold;
+    @apply text-4xl sm:text-5xl font-bold pb-4;
+  }
+
+  body {
+    @apply font-poppins text-base sm:text-lg;
+  }
+  
+  g {
+    @apply dark:stroke-light;
   }
 }
 
 :root {
-  --font-inter: 'Inter', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  
-} */
 
 * {
   box-sizing: border-box;
@@ -23,9 +26,4 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-}
-
-body {
-  font-family: theme('fontFamily.poppins');
-  font-size: 1.25rem;
 }
