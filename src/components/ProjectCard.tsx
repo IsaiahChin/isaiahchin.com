@@ -1,4 +1,5 @@
 import ExternalLinkIcon from '@/assets/ExternalLinkIcon';
+import GithubIcon from '@/assets/GithubIcon';
 
 interface Project {
   project: {
@@ -30,10 +31,11 @@ export default function ProjectCard({ project }: Project) {
             <a
               href={project.repo}
               target="_blank"
-              className="inline-flex border rounded-md p-2 bg-stone-50 dark:bg-primary/10
+              className="inline-flex gap-1 border rounded-md p-2 bg-stone-50 dark:bg-primary/10
             border-primary/30 dark:border-light/10 hover:border-accent dark:hover:border-accent transition-colors"
             >
-              GitHub
+              <GithubIcon />
+              Source
               <ExternalLinkIcon size="1.2" />
             </a>
           )}
@@ -41,7 +43,7 @@ export default function ProjectCard({ project }: Project) {
             <a
               href={project.link}
               target="_blank"
-              className="inline-flex border rounded-md p-2 bg-stone-50 dark:bg-primary/10
+              className="inline-flex gap-1 border rounded-md p-2 bg-stone-50 dark:bg-primary/10
             border-primary/30 dark:border-light/10 hover:border-accent dark:hover:border-accent transition-colors"
             >
               Live
