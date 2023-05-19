@@ -22,56 +22,44 @@ export default function Header() {
   }
 
   const navLinks = [
-    ['Home', '/'],
-    // ['Blog', '/blog'],
-    ['Projects', '/projects'],
+    { title: 'Home', link: '/', isExternal: false },
+    // { title: 'Blog', link: '/blog', isExternal: false },
+    { title: 'Projects', link: '/projects', isExternal: false },
+    {
+      title: 'GitHub',
+      link: 'https://github.com/IsaiahChin',
+      isExternal: true,
+    },
   ];
 
   return (
-    <header
-      id="home"
-      className="w-full bg-inherit py-4 sm:py-8 text-[16px] sm:text-xl sticky top-0"
-    >
-      <nav className="flex justify-between items-center dark:[&_g]:stroke-light">
+    <header className="w-full bg-inherit py-4 sm:py-8 text-[16px] sm:text-xl sticky top-0 z-50">
+      <nav className="flex justify-between items-center">
         <ul className="flex gap-4 items-center">
-          {navLinks.map(([title, url]) => (
-            <li key={title}>
+          {navLinks.map(({ title, link, isExternal }) => (
+            <li key={title} className="pr-4">
               <Link
-                href={url}
-                className={`${
-                  pathname === url
-                    ? 'underline decoration-primary dark:decoration-dark-accent '
-                    : ''
-                }hover:underline underline-offset-4 
-              hover:decoration-primary dark:hover:decoration-dark-accent`}
+                href={link}
+                className="underline-offset-4 hover:decoration-accent relative inline-flex gap-1 group"
+                target={`${isExternal ? '_blank' : '_self'}`}
               >
                 {title}
+                {pathname === link ? (
+                  <span className="absolute -bottom-1 w-full h-[2px] bg-accent"></span>
+                ) : (
+                  <span className="absolute -bottom-1 w-full h-0 bg-accent transition-[height] group-hover:h-[2px]"></span>
+                )}
+                {isExternal && <ExternalLinkIcon size="1.5" />}
               </Link>
             </li>
           ))}
-          <li>
-            <a
-              href="https://github.com/IsaiahChin"
-              className="inline-flex gap-x-1
-              hover:underline underline-offset-4 
-              hover:decoration-primary dark:hover:decoration-dark-accent"
-              target="_blank"
-            >
-              Github
-              <ExternalLinkIcon size="1.5" />
-            </a>
-          </li>
         </ul>
-        <div className="h-[32px]">
-          <button
-            onClick={() =>
-              theme == 'dark' ? setTheme('light') : setTheme('dark')
-            }
-            className="rounded:md hover:scale-125 active:scale-100 transition-transform"
-          >
-            {theme == 'dark' ? <SunIcon size="2" /> : <MoonIcon size="2" />}
-          </button>
-        </div>
+        <button
+          onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
+          className="hover:scale-125 active:scale-100 transition-transform"
+        >
+          {theme == 'dark' ? <SunIcon size="2" /> : <MoonIcon size="2" />}
+        </button>
       </nav>
     </header>
   );
