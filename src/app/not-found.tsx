@@ -4,11 +4,11 @@ import Link from 'next/link';
 export default function NotFound() {
   return (
     <Section>
-      <h1 className="pb-4 leading-tight">404</h1>
-      <p>I haven't made this page (yet) (maybe).</p>
+      <h1>404</h1>
+      <p>This is a page I haven't put any content on.</p>
       <Link
         href="/"
-        className="text-blue-600 underline decoration-blue-600 hover:no-underline"
+        className="dark:text-accent hover:underline underline-offset-4 transition-all"
       >
         Here's one I have.
       </Link>

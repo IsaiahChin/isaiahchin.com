@@ -4,13 +4,10 @@ import Penguin from '../assets/penguin-512x512.png';
 
 export default function Footer() {
   return (
-    <footer
-      className="flex w-full pb-8 text-base 
-    dark:[&_g]:stroke-light"
-    >
+    <footer className="flex w-full py-8 justify-between">
       <p className="group">
         Built by{' '}
-        <span className="underline decoration-primary dark:decoration-dark-accent underline-offset-4 decoration-dashed">
+        <span className="underline decoration-accent underline-offset-4 decoration-dashed">
           Isaiah
         </span>
         <Image
@@ -26,7 +23,7 @@ export default function Footer() {
         border-primary/10 dark:border-light/10 
         hover:bg-accent hover:-translate-y-1
         dark:hover:text-primary
-        dark:hover:bg-dark-accent
+        dark:hover:bg-accent
         dark:[&_g]:hover:stroke-primary
         transition-transform"
       >
