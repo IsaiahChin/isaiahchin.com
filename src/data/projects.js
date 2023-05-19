@@ -8,7 +8,7 @@ export const projects = [
   },
   {
     title: 'Grounded Bestiary',
-    description: 'A creature lookup/analysis tool for the game Grounded',
+    description: 'A creature lookup/analysis app for the game Grounded',
     dateStarted: 'WIP',
     repo: '#',
     link: '',
