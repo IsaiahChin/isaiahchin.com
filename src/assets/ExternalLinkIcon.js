@@ -1,4 +1,4 @@
-export default function ExternalLinkIcon({ size }) {
+export default function ExternalLinkIcon({ size = "1.5" }) {
   return (
     <svg
       width={`${size}rem`}
