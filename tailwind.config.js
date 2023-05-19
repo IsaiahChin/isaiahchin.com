@@ -14,11 +14,9 @@ module.exports = {
         primary: colors.slate[900],
         secondary: colors.zinc[900],
         light: colors.zinc[100],
-        accent: colors.lime[300],
-        'dark-accent': colors.violet[300],
+        accent: colors.emerald[400],
       },
       fontFamily: {
-        inter: ['var(--font-inter)'],
         poppins: ['var(--font-poppins)'],
       },
     },
