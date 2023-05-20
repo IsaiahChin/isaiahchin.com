@@ -8,7 +8,7 @@ export default function NotFound() {
       <p>This is a page I haven't put any content on.</p>
       <Link
         href="/"
-        className="dark:text-accent underline underline-offset-4 hover:decoration-accent transition-all"
+        className="dark:text-accent underline underline-offset-4"
       >
         Here's one I have.
       </Link>
