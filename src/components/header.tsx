@@ -49,7 +49,7 @@ export default function Header() {
                 ) : (
                   <span className="absolute -bottom-1 w-full h-0 bg-accent transition-[height] group-hover:h-[2px]"></span>
                 )}
-                {isExternal && <ExternalLinkIcon size="1.5" />}
+                {isExternal && <ExternalLinkIcon size="1.3" />}
               </Link>
             </li>
           ))}
