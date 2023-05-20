@@ -11,8 +11,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'fade-in-from-above':
-          'fade-in 0.5s forwards ease-in-out 0.5s, move-down 0.5s forwards ease-in-out 0.5s',
+        'fade-in': 'fade-in 0.5s forwards ease-in-out 0.5s',
       },
       colors: {
         primary: colors.slate[900],
@@ -30,14 +29,6 @@ module.exports = {
           },
           '100%': {
             opacity: 1,
-          },
-        },
-        'move-down': {
-          '0%': {
-            transform: 'translateY(-10%)',
-          },
-          '100%': {
-            transform: 'translateY(0)',
           },
         },
       },

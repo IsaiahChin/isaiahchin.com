@@ -19,8 +19,9 @@ export default function ThemeToggle() {
 
   return (
     <button
+      type="button"
       onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-      className="opacity-0 animate-fade-in-from-above hover:scale-125 active:scale-100 transition-[transform,_opacity]"
+      className="hover:scale-125 active:scale-100 opacity-0 animate-fade-in transition-[transform,_opacity]"
     >
       {theme == 'dark' ? <SunIcon size="2" /> : <MoonIcon size="2" />}
     </button>
