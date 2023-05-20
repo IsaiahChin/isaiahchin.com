@@ -1,25 +1,12 @@
 'use client';
 
 import ExternalLinkIcon from '../assets/ExternalLinkIcon';
-import SunIcon from '../assets/SunIcon';
-import MoonIcon from '../assets/MoonIcon';
-import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
-  const { theme, setTheme } = useTheme();
-  const [hasMounted, setHasMounted] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    setHasMounted(true);
-  });
-
-  if (!hasMounted) {
-    return null;
-  }
 
   const navLinks = [
     { title: 'Home', link: '/', isExternal: false },
@@ -54,12 +41,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-        <button
-          onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-          className="hover:scale-125 active:scale-100 transition-transform"
-        >
-          {theme == 'dark' ? <SunIcon size="2" /> : <MoonIcon size="2" />}
-        </button>
+        <ThemeToggle />
       </nav>
     </header>
   );
