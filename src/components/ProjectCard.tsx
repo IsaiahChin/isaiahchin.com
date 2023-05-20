@@ -8,15 +8,18 @@ interface Project {
     dateStarted: string;
     repo: string;
     link: string;
+    status: string;
   };
 }
 
 export default function ProjectCard({ project }: Project) {
   return (
     <div
-      className="project-card min-w-[300px] w-full min-h-[200px] flex flex-col justify-between
+      className={`project-card ${
+        project.status == 'inactive' && 'opacity-50'
+      } min-w-[300px] w-full min-h-[200px] flex flex-col justify-between
       text-base p-6 rounded-xl border border-primary/30 dark:border-light/10
-      bg-stone-50 dark:bg-zinc-800 gap-6 duration-200"
+      bg-stone-50 dark:bg-zinc-800 gap-6 duration-200`}
     >
       <div className="flex flex-col justify-between gap-4">
         <div className="flex justify-between">
