@@ -10,6 +10,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      animation: {
+        'fade-in-from-above':
+          'fade-in 0.5s forwards ease-in-out 0.5s, move-down 0.5s forwards ease-in-out 0.5s',
+      },
       colors: {
         primary: colors.slate[900],
         secondary: colors.zinc[900],
@@ -18,6 +22,24 @@ module.exports = {
       },
       fontFamily: {
         poppins: ['var(--font-poppins)'],
+      },
+      keyframes: {
+        'fade-in': {
+          '0%': {
+            opacity: 0,
+          },
+          '100%': {
+            opacity: 1,
+          },
+        },
+        'move-down': {
+          '0%': {
+            transform: 'translateY(-10%)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+          },
+        },
       },
     },
   },
