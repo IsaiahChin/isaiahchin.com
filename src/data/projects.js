@@ -3,8 +3,8 @@ export const projects = [
     title: 'isaiahchin.com',
     description: 'This website!',
     dateStarted: '2023',
-    repo: 'https://github.com/IsaiahChin',
-    link: '#',
+    repo: 'https://github.com/IsaiahChin/isaiahchin.com',
+    link: '',
     status: 'active',
   },
   {

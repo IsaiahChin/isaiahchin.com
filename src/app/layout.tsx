@@ -13,11 +13,17 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  authors: [{ name: 'Isaiah Chin' }],
+  description: 'Keen-eyed software developer. My personal website',
   title: {
     default: 'Isaiah Chin',
     template: '%s - Isaiah Chin',
   },
-  description: 'Keen-eyed software developer. My personal website',
+  icons: [
+    { rel: 'icon', url: '/favicon.ico' },
+    { rel: 'apple-touch-icon', url: '/favicon.ico' },
+  ],
+  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
