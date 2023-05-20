@@ -1,5 +1,5 @@
-import ProjectCard from '@/components/ProjectCard';
-import Section from '@/components/Section';
+import ProjectCard from '../components/ProjectCard';
+import Section from '../components/Section';
 import { projects } from '../data/projects.js';
 
 export default function Home() {

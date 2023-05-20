@@ -2,8 +2,8 @@ import '../styles/globals.css';
 import { Poppins } from 'next/font/google';
 import { Metadata } from 'next';
 
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Providers } from './providers';
 
 const poppins = Poppins({

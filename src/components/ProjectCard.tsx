@@ -1,5 +1,5 @@
-import ExternalLinkIcon from '@/assets/ExternalLinkIcon';
-import GithubIcon from '@/assets/GithubIcon';
+import ExternalLinkIcon from '../assets/ExternalLinkIcon';
+import GithubIcon from '../assets/GithubIcon';
 
 interface Project {
   project: {
