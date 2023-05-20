@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Section id="home" className="scroll-mt-[100vh]">
-        <h1>Hi, I'm Isaiah</h1>
+        <h1>Hi, I&apos;m Isaiah</h1>
         <p>A keen-eyed developer with a passion for UI/UX design.</p>
         <br />
         <p className="max-w-[70ch]">
