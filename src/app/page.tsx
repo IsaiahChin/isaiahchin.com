@@ -8,8 +8,7 @@ export default function Home() {
     <>
       <Section id="home" className="scroll-mt-[100vh]">
         <h1 className="before:content-['{'] before:text-accent after:content-['}'] after:text-accent">
-          {' '}
-          Hi, I'm Isaiah{' '}
+          {" Hi, I'm Isaiah "}
         </h1>
         <p>A keen-eyed developer with a passion for UI/UX design.</p>
         <p className="max-w-[70ch] pt-6">
