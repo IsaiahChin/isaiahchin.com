@@ -1,5 +1,7 @@
-import Section from '../../components/Section';
 import { Metadata } from 'next';
+
+import Section from '../../components/Section';
+import generateProjectCards from '../../util/generateProjectCards';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -8,10 +10,15 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <Section>
-      <h1>Projects</h1>
-      <p>
-        <i>Coming soon...</i>
-      </p>
+      <h1 className="pb-12 before:content-['/'] before:text-accent">
+        Projects
+      </h1>
+      <div
+        id="project-container"
+        className="grid sm:grid-cols-[repeat(2,_1fr)] gap-4"
+      >
+        {generateProjectCards()}
+      </div>
     </Section>
   );
 }
