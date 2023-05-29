@@ -7,7 +7,7 @@ export default function EmailIcon({ size = '1.5' }) {
       height={`${size}rem`}
       viewBox="0 0 24 24"
     >
-      <g stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
+      <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g
           transform="translate(-356.000000, -335.000000)"
           stroke="#333333"
