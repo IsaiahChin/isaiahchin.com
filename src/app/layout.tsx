@@ -38,7 +38,7 @@ export default function RootLayout({
         max-w-5xl m-0 mx-auto 
         px-6 flex flex-col min-h-screen 
         text-primary dark:text-light 
-        bg-light dark:bg-secondary 
+        bg-light dark:bg-dark 
         transition-colors`}
       >
         <Providers>

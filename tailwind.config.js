@@ -15,7 +15,8 @@ module.exports = {
       },
       colors: {
         primary: colors.slate[900],
-        secondary: colors.zinc[900],
+        dark: colors.zinc[900],
+        'dark-shade': colors.zinc[800],
         light: colors.zinc[100],
         accent: colors.emerald[400],
       },
