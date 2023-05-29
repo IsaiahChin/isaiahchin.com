@@ -10,9 +10,15 @@
   body {
     @apply font-poppins text-base sm:text-lg;
   }
-  
+
   g {
     @apply dark:stroke-light;
+  }
+
+  .clickable {
+    @apply p-2 bg-stone-50 dark:bg-primary/10 border rounded-xl 
+    border-primary/30 dark:border-light/10 hover:border-accent dark:hover:border-accent 
+    duration-200 transition-[colors,_transform];
   }
 }
 
