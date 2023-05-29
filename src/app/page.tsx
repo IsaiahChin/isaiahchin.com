@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Section from '../components/Section';
 import generateProjectCards from '../util/generateProjectCards';
 import RightArrowIcon from '../assets/RightArrowIcon';
+import ShowEmailButton from '../components/ShowEmailButton';
 
 export default function Home() {
   return (
@@ -24,8 +25,7 @@ export default function Home() {
           </h1>
           <Link
             href="/projects"
-            className="inline-flex gap-1 items-center p-2 rounded-xl border border-primary/30 dark:border-light/10 bg-stone-50 dark:bg-zinc-800
-          hover:border-accent dark:hover:border-accent hover:scale-105 active:scale-100 duration-200 transition-[color,_transform]"
+            className="inline-flex gap-1 items-center px-3 hover:scale-105 active:scale-100 clickable"
           >
             More <RightArrowIcon />
           </Link>
@@ -36,6 +36,16 @@ export default function Home() {
         >
           {generateProjectCards(2)}
         </div>
+      </Section>
+      <Section id="contact">
+        <div className="flex justify-between items-start">
+          <h1 className="before:content-['/'] before:text-accent pb-12">
+            Contact
+          </h1>
+        </div>
+        <p>
+          Want to talk? Send me a message at: <ShowEmailButton />
+        </p>
       </Section>
     </>
   );
