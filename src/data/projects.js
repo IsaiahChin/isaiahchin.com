@@ -8,8 +8,8 @@ export const projects = [
     status: 'active',
   },
   {
-    title: 'Grounded Bestiary',
-    description: 'A creature lookup/analysis app for the game Grounded',
+    title: `The Knight's Calculator`,
+    description: 'A damage analysis tool for the game Hollow Knight',
     dateStarted: 'WIP',
     repo: '',
     link: '',
