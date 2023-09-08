@@ -30,17 +30,6 @@ export default function ProjectCard({ project }: Project) {
       </div>
       {(project.repo || project.link) && (
         <div className="flex gap-2">
-          {project.repo && (
-            <a
-              href={project.repo}
-              target="_blank"
-              className="inline-flex gap-1 rounded-md clickable"
-            >
-              <GithubIcon />
-              Source
-              <ExternalLinkIcon size="1.2" />
-            </a>
-          )}
           {project.link && (
             <a
               href={project.link}
@@ -49,6 +38,17 @@ export default function ProjectCard({ project }: Project) {
             border-primary/30 dark:border-light/10 hover:border-accent dark:hover:border-accent transition-colors"
             >
               Live
+              <ExternalLinkIcon size="1.2" />
+            </a>
+          )}
+          {project.repo && (
+            <a
+              href={project.repo}
+              target="_blank"
+              className="inline-flex gap-1 rounded-md clickable"
+            >
+              <GithubIcon />
+              Source
               <ExternalLinkIcon size="1.2" />
             </a>
           )}
