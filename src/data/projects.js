@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: 'isaiahchin.com',
-    description: 'This website!',
+    description: 'My personal website.',
     dateStarted: '2023',
     repo: 'https://github.com/IsaiahChin/isaiahchin.com',
     link: '',
@@ -9,11 +9,11 @@ export const projects = [
   },
   {
     title: `The Knight's Calculator`,
-    description: 'A damage analysis tool for the game Hollow Knight',
-    dateStarted: 'WIP',
-    repo: '',
-    link: '',
-    status: 'inactive',
+    description: 'A damage analysis tool for the game Hollow Knight.',
+    dateStarted: '2023',
+    repo: 'https://github.com/IsaiahChin/the-knights-calculator',
+    link: 'https://isaiahchin.github.io/the-knights-calculator/',
+    status: 'active',
   },
   {
     title: 'D&D Spellbook',
