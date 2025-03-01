@@ -1,0 +1,13 @@
+import Section from "./Section";
+import generateProjectCards from "@/util/generateProjectCards";
+
+export default function ProjectSection() {
+  return (
+    <Section id="projects">
+      <div className="flex justify-between items-start">
+        <h2 className="mb-10">Projects</h2>
+      </div>
+      {generateProjectCards()}
+    </Section>
+  );
+}
