@@ -14,16 +14,20 @@ export default function ThemeToggle() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return (
+      <button className="p-2">
+        <FiSun size="1.6rem" />
+      </button>
+    );
   }
 
   return (
     <button
       type="button"
-      onClick={() => setTheme(theme == "dark" ? "light" : "dark")}
-      className="hover:scale-125 active:scale-100 opacity-0 animate-fade-in transition-[transform,_opacity]"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="bg-inherit p-2 rounded-xl hover:scale-125 active:scale-100 transition-transform"
     >
-      {theme == "dark" ? <FiSun size={"2rem"} /> : <FiMoon size={"2rem"} />}
+      {theme === "dark" ? <FiSun size="1.6rem" /> : <FiMoon size="1.6rem" />}
     </button>
   );
 }
