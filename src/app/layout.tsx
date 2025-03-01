@@ -2,8 +2,8 @@ import "../styles/globals.css";
 import { Poppins } from "next/font/google";
 import { Metadata } from "next";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Providers } from "./providers";
 
 const poppins = Poppins({
@@ -35,16 +35,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${poppins.className} overflow-x-hidden
-        max-w-5xl m-0 mx-auto 
-        px-6 flex flex-col min-h-screen 
-        text-primary dark:text-light 
-        bg-light dark:bg-dark 
-        transition-colors`}
+        className={`${poppins.className} overflow-x-hidden max-w-4xl mx-auto px-6 sm:px-16 flex flex-col min-h-screen text-primary dark:text-light bg-light dark:bg-dark transition-colors`}
       >
         <Providers>
           <Header />
-          <main className="w-full my-8 flex-1">{children}</main>
+          <main className="w-full">{children}</main>
           <Footer />
         </Providers>
       </body>
