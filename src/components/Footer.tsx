@@ -5,16 +5,16 @@ import Penguin from "../assets/penguin-512x512.png";
 export default function Footer() {
   return (
     <footer className="flex w-full py-8 justify-between">
-      <p className="group">
+      <p>
         Built by{" "}
-        <span className="underline decoration-accent underline-offset-4 decoration-dashed">
+        <span className="underline underline-offset-4 decoration-dashed dark:decoration-accent group cursor-help">
           Isaiah
+          <Image
+            src={Penguin}
+            alt="Penguin"
+            className="fixed -bottom-40 left-1/4 max-w-[8rem] w-fit sm:ml-[11.8rem] sm:pointer-events-none group-hover:-translate-y-24 transition-transform"
+          />
         </span>
-        <Image
-          src={Penguin}
-          alt="Penguin"
-          className="fixed -bottom-40 left-1/4 max-w-[8rem] w-fit sm:ml-[11.8rem] sm:pointer-events-none group-hover:-translate-y-24 transition-transform"
-        />
       </p>
       {/* Back to Top feature */}
       {/* <a
