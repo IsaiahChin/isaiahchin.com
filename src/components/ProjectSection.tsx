@@ -5,7 +5,7 @@ export default function ProjectSection() {
   return (
     <Section id="projects">
       <div className="flex justify-between items-start">
-        <h2 className="before:content-['/'] before:text-accent mb-10">
+        <h2 className="before:content-['/'] dark:before:text-accent mb-9">
           Projects
         </h2>
       </div>
