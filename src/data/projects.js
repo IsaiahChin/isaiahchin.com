@@ -16,10 +16,10 @@ export const projects = [
     status: 'active',
   },
   {
-    title: 'D&D Spellbook',
-    description: 'A web-based Dungeons and Dragons spell tool',
+    title: 'Ultimate Werewolf Tools',
+    description: 'Easily setup and moderate Ultimate Werewolf games.',
     dateStarted: 'Coming soon',
-    repo: '',
+    repo: 'https://github.com/IsaiahChin/ultimate-werewolf-moderator',
     link: '',
     status: 'inactive',
   },
