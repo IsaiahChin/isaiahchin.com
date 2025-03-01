@@ -9,9 +9,9 @@ export default function Section({
 }) {
   return (
     <section
-      id={`${id ? id : ''}`}
+      id={`${id ? id : ""}`}
       className={`${
-        className ? className : ''
+        className ? className : ""
       } inline-block my-8 sm:my-16 w-full`}
     >
       {children}

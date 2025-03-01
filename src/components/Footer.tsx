@@ -1,12 +1,12 @@
 // import UpArrowIcon from '../assets/UpArrowIcon';
-import Image from 'next/image';
-import Penguin from '../assets/penguin-512x512.png';
+import Image from "next/image";
+import Penguin from "../assets/penguin-512x512.png";
 
 export default function Footer() {
   return (
     <footer className="flex w-full py-8 justify-between">
       <p className="group">
-        Built by{' '}
+        Built by{" "}
         <span className="underline decoration-accent underline-offset-4 decoration-dashed">
           Isaiah
         </span>

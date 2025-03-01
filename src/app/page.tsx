@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import Section from '../components/Section';
-import generateProjectCards from '../util/generateProjectCards';
-import RightArrowIcon from '../assets/RightArrowIcon';
-import ShowEmailButton from '../components/ShowEmailButton';
+import Link from "next/link";
+import Section from "../components/Section";
+import generateProjectCards from "../util/generateProjectCards";
+import RightArrowIcon from "../assets/RightArrowIcon";
+import ShowEmailButton from "../components/ShowEmailButton";
 
 export default function Home() {
   return (

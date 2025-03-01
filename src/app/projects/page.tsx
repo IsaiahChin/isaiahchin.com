@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
-import Section from '../../components/Section';
-import generateProjectCards from '../../util/generateProjectCards';
+import Section from "../../components/Section";
+import generateProjectCards from "../../util/generateProjectCards";
 
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: "Projects",
 };
 
 export default function Projects() {

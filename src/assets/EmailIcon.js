@@ -1,4 +1,4 @@
-export default function EmailIcon({ size = '1.5' }) {
+export default function EmailIcon({ size = "1.5" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

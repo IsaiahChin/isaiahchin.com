@@ -1,4 +1,4 @@
-export default function GithubIcon({ size = '1.5' }) {
+export default function GithubIcon({ size = "1.5" }) {
   return (
     <svg width={`${size}rem`} height={`${size}rem`} viewBox="0 0 24 24">
       <path

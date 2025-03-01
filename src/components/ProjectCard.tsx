@@ -1,5 +1,5 @@
-import ExternalLinkIcon from '../assets/ExternalLinkIcon';
-import GithubIcon from '../assets/GithubIcon';
+import ExternalLinkIcon from "../assets/ExternalLinkIcon";
+import GithubIcon from "../assets/GithubIcon";
 
 interface Project {
   project: {
@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: Project) {
   return (
     <div
       className={`project-card ${
-        project.status == 'inactive' && 'opacity-50'
+        project.status == "inactive" && "opacity-50"
       } min-w-[300px] w-full min-h-[200px] flex flex-col justify-between
       text-base p-6 rounded-xl border border-primary/30 dark:border-light/10
       bg-stone-50 dark:bg-dark-shade gap-6 duration-200`}

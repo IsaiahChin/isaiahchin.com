@@ -1,5 +1,5 @@
-import ProjectCard from '../components/ProjectCard';
-import { projects } from '../data/projects.js';
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../data/projects.js";
 
 /**
  * A helper function that renders populated ProjectCards

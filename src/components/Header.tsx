@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import ExternalLinkIcon from '../assets/ExternalLinkIcon';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import ThemeToggle from './ThemeToggle';
+import ExternalLinkIcon from "../assets/ExternalLinkIcon";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { title: 'Home', link: '/', isExternal: false },
+    { title: "Home", link: "/", isExternal: false },
     // { title: 'Blog', link: '/blog', isExternal: false },
-    { title: 'Projects', link: '/projects', isExternal: false },
+    { title: "Projects", link: "/projects", isExternal: false },
     {
-      title: 'GitHub',
-      link: 'https://github.com/IsaiahChin',
+      title: "GitHub",
+      link: "https://github.com/IsaiahChin",
       isExternal: true,
     },
   ];
@@ -28,7 +28,7 @@ export default function Header() {
               <Link
                 href={link}
                 className="underline-offset-4 hover:decoration-accent relative inline-flex gap-1 group"
-                target={`${isExternal ? '_blank' : '_self'}`}
+                target={`${isExternal ? "_blank" : "_self"}`}
               >
                 {title}
                 {pathname === link ? (

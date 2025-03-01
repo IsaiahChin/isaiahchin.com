@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import EmailIcon from '../assets/EmailIcon';
-import ClickableIcon from '../assets/ClickableIcon';
+import { useState } from "react";
+import EmailIcon from "../assets/EmailIcon";
+import ClickableIcon from "../assets/ClickableIcon";
 
 export default function ShowEmailButton() {
   const [isShowingEmail, setIsShowingEmail] = useState(false);
-  const email = 'hello@isaiahchin.com';
+  const email = "hello@isaiahchin.com";
 
   function showEmail() {
     if (isShowingEmail == false) {

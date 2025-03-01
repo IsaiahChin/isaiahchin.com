@@ -1,4 +1,4 @@
-export default function RightArrow({ size = '1.5' }) {
+export default function RightArrow({ size = "1.5" }) {
   return (
     <svg
       width={`${size}rem`}
