@@ -1,5 +1,4 @@
-import ExternalLinkIcon from '../assets/ExternalLinkIcon';
-import GithubIcon from '../assets/GithubIcon';
+import { FaArrowRight } from "react-icons/fa6";
 
 interface Project {
   project: {
@@ -16,44 +15,25 @@ export default function ProjectCard({ project }: Project) {
   return (
     <div
       className={`project-card ${
-        project.status == 'inactive' && 'opacity-50'
-      } min-w-[300px] w-full min-h-[200px] flex flex-col justify-between
-      text-base p-6 rounded-xl border border-primary/30 dark:border-light/10
-      bg-stone-50 dark:bg-dark-shade gap-6 duration-200`}
+        project.status == "inactive" && "opacity-50"
+      } w-full [&>*]:w-fit`}
     >
-      <div className="flex flex-col justify-between gap-4">
-        <div className="flex justify-between">
-          <h2 className="text-xl">{project.title}</h2>
-          <code>{project.dateStarted}</code>
-        </div>
-        <p>{project.description}</p>
+      <div className="mb-3 group">
+        {project.link ? (
+          <a
+            href={project.link}
+            target="_blank"
+            className="inline-flex gap-2 items-center underline decoration-dashed group-hover:decoration-solid underline-offset-4 dark:decoration-accent"
+          >
+            {project.title}
+            <FaArrowRight className="-rotate-45 group-hover:rotate-0 dark:fill-accent transition-all" />
+          </a>
+        ) : (
+          <p>{project.title} <span className="text-sm">(it&apos;s getting there)</span></p>
+        )}
       </div>
-      {(project.repo || project.link) && (
-        <div className="flex gap-2">
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              className="inline-flex gap-1 border rounded-md p-2 bg-stone-50 dark:bg-primary/10
-            border-primary/30 dark:border-light/10 hover:border-accent dark:hover:border-accent transition-colors"
-            >
-              Live
-              <ExternalLinkIcon size="1.2" />
-            </a>
-          )}
-          {project.repo && (
-            <a
-              href={project.repo}
-              target="_blank"
-              className="inline-flex gap-1 rounded-md clickable"
-            >
-              <GithubIcon />
-              Source
-              <ExternalLinkIcon size="1.2" />
-            </a>
-          )}
-        </div>
-      )}
+
+      <p className="text-base">{project.description}</p>
     </div>
   );
 }

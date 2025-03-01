@@ -1,46 +1,14 @@
-'use client';
-
-import ExternalLinkIcon from '../assets/ExternalLinkIcon';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import ThemeToggle from './ThemeToggle';
+import GitHubButton from "./GitHubButton";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
-  const pathname = usePathname();
-
-  const navLinks = [
-    { title: 'Home', link: '/', isExternal: false },
-    // { title: 'Blog', link: '/blog', isExternal: false },
-    { title: 'Projects', link: '/projects', isExternal: false },
-    {
-      title: 'GitHub',
-      link: 'https://github.com/IsaiahChin',
-      isExternal: true,
-    },
-  ];
-
   return (
-    <header className="w-full bg-inherit py-4 sm:py-8 text-[16px] sm:text-xl sticky top-0 z-50">
-      <nav className="flex justify-between items-center">
-        <ul className="flex gap-4 items-center">
-          {navLinks.map(({ title, link, isExternal }) => (
-            <li key={title} className="pr-4">
-              <Link
-                href={link}
-                className="underline-offset-4 hover:decoration-accent relative inline-flex gap-1 group"
-                target={`${isExternal ? '_blank' : '_self'}`}
-              >
-                {title}
-                {pathname === link ? (
-                  <span className="absolute -bottom-1 w-full h-[2px] bg-accent"></span>
-                ) : (
-                  <span className="absolute -bottom-1 w-full h-0 bg-accent transition-[height] group-hover:h-[2px]"></span>
-                )}
-                {isExternal && <ExternalLinkIcon size="1.3" />}
-              </Link>
-            </li>
-          ))}
-        </ul>
+    <header className="flex justify-between items-center w-full py-6 sm:mt-12 bg-inherit sticky top-0 z-50">
+      <h2>
+        Isaiah Chin<span className="dark:text-accent">.</span>
+      </h2>
+      <nav className="w-fit flex justify-end items-center gap-2 py-2 rounded-2xl">
+        <GitHubButton />
         <ThemeToggle />
       </nav>
     </header>

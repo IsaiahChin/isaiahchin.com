@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import SunIcon from '../assets/SunIcon';
-import MoonIcon from '../assets/MoonIcon';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { FiSun } from "react-icons/fi";
+import { FiMoon } from "react-icons/fi";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -14,16 +14,24 @@ export default function ThemeToggle() {
   }, []);
 
   if (!hasMounted) {
-    return null;
+    return (
+      <button className="p-2">
+        <FiSun size="1.6rem" />
+      </button>
+    );
   }
 
   return (
     <button
       type="button"
-      onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
-      className="hover:scale-125 active:scale-100 opacity-0 animate-fade-in transition-[transform,_opacity]"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="bg-inherit p-2 rounded-xl hover:scale-125 active:scale-100 transition-transform group"
     >
-      {theme == 'dark' ? <SunIcon size="2" /> : <MoonIcon size="2" />}
+      {theme === "dark" ? (
+        <FiSun size="1.6rem" className="group-hover:stroke-amber-400" />
+      ) : (
+        <FiMoon size="1.6rem" className="group-hover:stroke-violet-600" />
+      )}
     </button>
   );
 }

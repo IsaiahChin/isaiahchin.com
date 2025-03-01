@@ -4,7 +4,19 @@
 
 @layer base {
   h1 {
-    @apply text-4xl sm:text-5xl font-bold pb-4;
+    @apply text-3xl sm:text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl sm:text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-lg sm:text-xl font-bold;
   }
 
   body {
@@ -23,7 +35,7 @@
 }
 
 :root {
-  --font-poppins: 'Poppins', sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 * {
