@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: Project) {
             <FaArrowRight className="-rotate-45 group-hover:rotate-0 dark:fill-accent transition-all" />
           </a>
         ) : (
-          <p>{project.title} <span className="text-sm">(it's getting there)</span></p>
+          <p>{project.title} <span className="text-sm">(it&apos;s getting there)</span></p>
         )}
       </div>
 
