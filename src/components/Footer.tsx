@@ -1,4 +1,4 @@
-// import UpArrowIcon from '../assets/UpArrowIcon';
+// import { FaArrowUp } from "react-icons/fa6"
 import Image from "next/image";
 import Penguin from "../assets/penguin-512x512.png";
 
@@ -27,7 +27,7 @@ export default function Footer() {
         dark:[&_g]:hover:stroke-primary
         transition-transform"
       >
-        <UpArrowIcon />
+        <FaArrowUp />
         Back to top
       </a> */}
     </footer>

@@ -1,5 +1,5 @@
-import ExternalLinkIcon from "../assets/ExternalLinkIcon";
-import GithubIcon from "../assets/GithubIcon";
+import { RxExternalLink } from "react-icons/rx";
+import { FaGithub } from "react-icons/fa"
 
 interface Project {
   project: {
@@ -38,7 +38,7 @@ export default function ProjectCard({ project }: Project) {
             border-primary/30 dark:border-light/10 hover:border-accent dark:hover:border-accent transition-colors"
             >
               Live
-              <ExternalLinkIcon size="1.2" />
+              <RxExternalLink size={"1.2rem"} />
             </a>
           )}
           {project.repo && (
@@ -47,9 +47,9 @@ export default function ProjectCard({ project }: Project) {
               target="_blank"
               className="inline-flex gap-1 rounded-md clickable"
             >
-              <GithubIcon />
+              <FaGithub size={"1.5rem"} />
               Source
-              <ExternalLinkIcon size="1.2" />
+              <RxExternalLink size={"1.2rem"} />
             </a>
           )}
         </div>

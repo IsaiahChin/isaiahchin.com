@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Section from "../components/Section";
 import generateProjectCards from "../util/generateProjectCards";
-import RightArrowIcon from "../assets/RightArrowIcon";
+import { FaArrowRight  } from "react-icons/fa";
 import ShowEmailButton from "../components/ShowEmailButton";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
             href="/projects"
             className="inline-flex gap-1 items-center px-3 hover:scale-105 active:scale-100 clickable"
           >
-            More <RightArrowIcon />
+            More <FaArrowRight  />
           </Link>
         </div>
         <div

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import EmailIcon from "../assets/EmailIcon";
-import ClickableIcon from "../assets/ClickableIcon";
+
+import { GrSend } from "react-icons/gr";
+import { LuMousePointerClick } from "react-icons/lu";
 
 export default function ShowEmailButton() {
   const [isShowingEmail, setIsShowingEmail] = useState(false);
@@ -25,12 +26,12 @@ export default function ShowEmailButton() {
       {isShowingEmail ? (
         <>
           {email}
-          <EmailIcon />
+          <GrSend />
         </>
       ) : (
         <>
           Show email
-          <ClickableIcon />
+          <LuMousePointerClick />
         </>
       )}
     </button>

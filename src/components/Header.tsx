@@ -1,6 +1,6 @@
 "use client";
 
-import ExternalLinkIcon from "../assets/ExternalLinkIcon";
+import { RxExternalLink } from "react-icons/rx";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
@@ -36,7 +36,7 @@ export default function Header() {
                 ) : (
                   <span className="absolute -bottom-1 w-full h-0 bg-accent transition-[height] group-hover:h-[2px]"></span>
                 )}
-                {isExternal && <ExternalLinkIcon size="1.3" />}
+                {isExternal && <RxExternalLink size={"1.3rem"} />}
               </Link>
             </li>
           ))}
