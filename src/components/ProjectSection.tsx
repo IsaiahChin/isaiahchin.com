@@ -7,7 +7,7 @@ export default function ProjectSection() {
       <div className="flex justify-between items-start">
         <h2 className="mb-10">Projects</h2>
       </div>
-      {generateProjectCards()}
+      <div className="flex flex-col gap-12">{generateProjectCards()}</div>
     </Section>
   );
 }
